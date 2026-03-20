@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhematek Consulting - Expert Technology Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--navy:#0f2747;--slate:#53657a;--line:#e5e7eb;}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#f9fafb;color:#1f2937}
+    .site-header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(15,39,71,.08)}
+    .nav-link{color:#334155;font-weight:500;transition:color .2s ease;position:relative}
+    .nav-link:hover,.nav-link.active{color:var(--navy)}
+    .nav-link::after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:2px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+    .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1)}
+    .hero-image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(15,39,71,.82) 0%, rgba(15,39,71,.56) 42%, rgba(15,39,71,.18) 100%),linear-gradient(180deg, rgba(15,39,71,.18), rgba(15,39,71,.35))}
+    .primary-btn{background:var(--navy);color:white;transition:all .2s ease}
+    .primary-btn:hover{background:#0a1d35;transform:translateY(-1px)}
+    .secondary-btn{border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.10);color:white;backdrop-filter:blur(6px)}
+    .secondary-btn:hover{background:rgba(255,255,255,.18)}
+    .card{background:white;border:1px solid var(--line);box-shadow:0 10px 28px rgba(15,39,71,.06)}
+    .section-label{letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;font-weight:700;color:#64748b}
+    .icon-circle{width:3rem;height:3rem;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:#eef2f7;color:var(--navy);font-size:1.25rem;font-weight:700}
+    .footer{background:#0d1d31}
+  </style>
+</head>
+<body>
+  <header class="site-header fixed inset-x-0 top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <a href="#home" class="flex items-center gap-3">
+          <svg width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg" aria-label="Rhematek Consulting logo">
+            <g transform="translate(4 4)">
+              <path d="M0 28 L0 14 L15 4 L15 18 Z" fill="#B8BDC5"/>
+              <path d="M18 0 L42 14 L42 28 L27 18 L27 28 L42 38 L42 46 L18 32 L18 22 L8 29 L18 36 L18 46 L0 34 L0 18 Z" fill="#0F2747"/>
+              <path d="M8 29 L18 22 L27 18 L27 28 L18 36 Z" fill="#F4F6F8"/>
+            </g>
+          </svg>
+          <div class="leading-tight">
+            <div class="text-[1.9rem] font-semibold tracking-tight text-[#0f2747]">Rhematek</div>
+            <div class="-mt-1 text-lg text-slate-500">Consulting</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#team" class="nav-link">Team</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden rounded-lg border border-slate-200 px-3 py-2 text-slate-700" aria-label="Toggle menu">☰</button>
+      </div>
+      <nav id="mobile-menu" class="hidden border-t border-slate-200 pb-4 pt-3 md:hidden">
+        <div class="flex flex-col gap-3">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#team" class="nav-link">Team</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="relative min-h-screen overflow-hidden">
+      <div class="hero-image absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2000&q=80" alt="Senior professionals in a strategy meeting" class="h-full w-full object-cover" />
+      </div>
+      <div class="relative z-10 flex min-h-screen items-center">
+        <div class="container mx-auto px-4 pt-28">
+          <div class="max-w-3xl text-white">
+            <p class="section-label !text-slate-200">Technology Strategy Consultancy</p>
+            <h1 class="mt-4 text-4xl font-bold leading-tight md:text-6xl">Technology strategy and cloud solutions that move organisations forward</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-100 md:text-xl">Rhematek Consulting helps businesses modernise, secure and scale critical technology with clear advice, practical delivery support and senior-led expertise.</p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#services" class="primary-btn rounded-full px-8 py-3 font-semibold">View Services</a>
+              <a href="#contact" class="secondary-btn rounded-full px-8 py-3 font-semibold">Talk to Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="about" class="bg-white py-24">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">Begin Your Journey with us</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">
+            We are experienced problem-solvers with a passion for helping you get to What's Next.
+          </p>
+        </div>
+
+        <div class="mt-14 grid items-center gap-10 md:grid-cols-2">
+          <div class="overflow-hidden rounded-3xl card">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80"
+                 alt="business team"
+                 class="h-80 w-full object-cover" />
+          </div>
+
+          <div>
+            <p class="text-lg leading-8 text-slate-600">
+              Experience matters. We have 30 years of proven success working across industries with businesses of all sizes to simplify their journey. 
+              We recognize the unique needs of each industry and understand what matters most to your business. 
+              Our approach allows us to see the headwinds and proactively maneuver our clients through complex technical landscapes 
+              while saving precious resources along the way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="services" class="bg-slate-50 py-24">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="section-label">Services</p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">Powerful results across many industries</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">Technology and business strategy now move together. Our services are designed to make that connection clear and effective.</p>
+        </div>
+        <div class="mt-14 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div class="card rounded-3xl p-8"><div class="icon-circle">↗</div><h3 class="mt-6 text-2xl font-semibold text-slate-900">Digital Transformation Strategy</h3><p class="mt-4 leading-8 text-slate-600">Shape technology decisions around business goals, operating reality and long-term capability rather than short-term noise.</p></div>
+          <div class="card rounded-3xl p-8"><div class="icon-circle">☁</div><h3 class="mt-6 text-2xl font-semibold text-slate-900">Cloud Migration</h3><p class="mt-4 leading-8 text-slate-600">Start your cloud journey with practical real-world guidance on architecture, readiness, implementation and best practice.</p></div>
+          <div class="card rounded-3xl p-8"><div class="icon-circle">◎</div><h3 class="mt-6 text-2xl font-semibold text-slate-900">Assessments and Workshops</h3><p class="mt-4 leading-8 text-slate-600">Structured assessments and advisory workshops that surface risks, clarify priorities and support confident execution.</p></div>
+        </div>
+        <div class="mt-10 text-center"><a href="#contact" class="primary-btn inline-block rounded-full px-8 py-3 font-semibold">Discuss Your Requirements</a></div>
+      </div>
+    </section>
+
+    <section id="team" class="bg-white py-24">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="section-label">Leadership</p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">We bring experienced minds together</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">A senior team focused on solving difficult technology challenges with clarity and care.</p>
+        </div>
+        <div class="mt-14 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 text-center"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Codie Smith" class="mx-auto h-32 w-32 rounded-full object-cover" /><h3 class="mt-5 text-xl font-semibold text-slate-900">Codie Smith</h3><p class="mt-2 text-slate-500">Global Operations Director</p></div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 text-center"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Chelsea Ray" class="mx-auto h-32 w-32 rounded-full object-cover" /><h3 class="mt-5 text-xl font-semibold text-slate-900">Chelsea Ray</h3><p class="mt-2 text-slate-500">Talent Acquisition Director</p></div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6 text-center"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah Spears" class="mx-auto h-32 w-32 rounded-full object-cover" /><h3 class="mt-5 text-xl font-semibold text-slate-900">Sarah Spears</h3><p class="mt-2 text-slate-500">Sales and Marketing Director</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-slate-50 py-24">
+      <div class="container mx-auto px-4">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="section-label">Contact</p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">Talk to us</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">Tell us a little about your challenge and we will get back to you.</p>
+        </div>
+        <div class="mx-auto mt-14 max-w-2xl">
+          <form class="card rounded-3xl p-8">
+            <div class="mb-6"><label for="name" class="mb-2 block font-medium text-slate-700">Name *</label><input type="text" id="name" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-slate-500 focus:outline-none" /></div>
+            <div class="mb-6"><label for="email" class="mb-2 block font-medium text-slate-700">Email *</label><input type="email" id="email" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-slate-500 focus:outline-none" /></div>
+            <div class="mb-6"><label for="phone" class="mb-2 block font-medium text-slate-700">Phone *</label><input type="tel" id="phone" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-slate-500 focus:outline-none" /></div>
+            <div class="mb-6"><label for="message" class="mb-2 block font-medium text-slate-700">Message *</label><textarea id="message" rows="5" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-slate-500 focus:outline-none"></textarea></div>
+            <button type="submit" class="primary-btn w-full rounded-xl py-3 font-semibold">Contact Us</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer py-14 text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-3">
+            <svg width="48" height="48" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g transform="translate(4 4)">
+                <path d="M0 28 L0 14 L15 4 L15 18 Z" fill="#B8BDC5"/>
+                <path d="M18 0 L42 14 L42 28 L27 18 L27 28 L42 38 L42 46 L18 32 L18 22 L8 29 L18 36 L18 46 L0 34 L0 18 Z" fill="#FFFFFF"/>
+                <path d="M8 29 L18 22 L27 18 L27 28 L18 36 Z" fill="#DDE4EC"/>
+              </g>
+            </svg>
+            <div><div class="text-2xl font-semibold">Rhematek</div><div class="-mt-1 text-slate-300">Consulting</div></div>
+          </div>
+          <p class="mt-5 max-w-sm leading-8 text-slate-300">We solve complex technical and strategic challenges with tailored consulting and practical delivery support.</p>
+        </div>
+        <div><h4 class="text-lg font-semibold">Quick Links</h4><ul class="mt-5 space-y-3 text-slate-300"><li><a href="#home" class="hover:text-white">Home</a></li><li><a href="#about" class="hover:text-white">About</a></li><li><a href="#services" class="hover:text-white">Services</a></li><li><a href="#contact" class="hover:text-white">Contact</a></li></ul></div>
+        <div><h4 class="text-lg font-semibold">Contact</h4><ul class="mt-5 space-y-3 text-slate-300"><li>(650) 648 3185</li><li>sales@rhematek.com</li><li>2672 Bayshore Parkway, Mountain View, CA, USA</li></ul></div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-8 text-center text-slate-400"><p>© <span id="current-year"></span> Rhematek Consulting. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+    const sections = ['home','about','services','team','contact'].map(id => document.getElementById(id)).filter(Boolean);
+    function setActiveLink(){
+      const scrollY = window.scrollY + 120;
+      let currentId = 'home';
+      for (const section of sections){ if (scrollY >= section.offsetTop) currentId = section.id; }
+      navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`));
+    }
+    navLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    window.addEventListener('scroll', setActiveLink);
+    window.addEventListener('load', setActiveLink);
+  </script>
+</body>
+</html>
